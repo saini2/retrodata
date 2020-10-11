@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&amp;family=Bangers&amp;display=swap"
+        rel="stylesheet">
+    </link>
+</head>
+
+<body>
+    <div>
+        <div class="search">
+            <div class="parent">
+                <label for="mySelect" class="margin">Entries:</label>
+                <select id="mySelect" oninput="selectEntries()" class="select">
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                </select>
+            </div>
+            <div class="parent">
+                <label for="header" class="margin">Header:</label>
+                <select id="header" oninput="selectHeader()" class="select">
+                    <option>Fixed</option>
+                    <option>Scroll</option>
+                </select>
+            </div>
+            <div class="parent">
+                <label for="search" class="margin">Search:</label>
+                <input type="search" id="search" name="search" class="child" onsearch="onSearch(this)">
+            </div>
+        </div>
+        <div>
+            <ul class="responsive-table_1" id='responsive-table_1'>
+                <li class="table-header">
+                    <div class="top" id='name'>
+                        <div class="col col-1" >Country</div>
+                        <div class="top2" id='name_arrow'>
+                            <i class="arrow up"></i>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                    <div class="top" id='alpha3Code'>
+                        <div class="col col-2">Alpha3Code</div>
+                        <div class="top2" id='alpha3Code_arrow'>
+                            <i class="arrow up"></i>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                    <div class="top" id='area' >
+                        <div class="col col-3" >Area</div>
+                        <div class="top2" id='area_arrow'>
+                            <i class="arrow up"></i>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                    <div class="top" id='demonym'>
+                        <div class="col col-4" >Demonym</div>
+                        <div class="top2" id='demonym_arrow'>
+                            <i class="arrow up"></i>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                    <div class="top" id='capital'>
+                        <div class="col col-5" >Capital</div>
+                        <div class="top2" id = 'capital_arrow'>
+                            <i class="arrow up"></i>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                    <div class="top" id='population'>
+                        <div class="col col-6" >Population</div>
+                        <div class="top2" id = 'population_arrow'>
+                            <i class="arrow up"></i>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="responsive-table" id='responsive-table'>
+            </ul>
+        </div>
+        <div class="pazination">
+            <button class="buttonclass pre" onclick="prevPage()" id='prevPage'> <i class="arrow1 left"></i></button>
+            <ul class="listParent" id='listParent'>
+            </ul>
+            <button class="buttonclass next" onclick="nextPage()" id='nextPage'><i class="arrow1 right"></i></button>
+        </div>
+
+    </div>
+</body>
+<script src='./script.js'></script>
+
+</html>
